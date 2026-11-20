@@ -1270,8 +1270,6 @@
       h += '<tr' + (line ? ' class="line80"' : '') + '><td class="num">第' + r.dai + '問</td><td>' + esc(r.q) + '</td><td class="num">' + esc(r.no) + '</td><td>' + esc(r.topic) + '</td><td><a href="#unit-' + r.u + '">' + fx(UBY[r.u].name) + '</a></td><td>' + tb(r.t) + '</td><td class="num">' + r.pt + '</td><td class="rt">' + rateBar(r.sei) + '<span class="num">' + r.sei.toFixed(1) + '%</span></td><td class="num">' + r.tok.toFixed(1) + '%</td><td>' + difTag(r.b) + '</td></tr>';
     });
     h += '</tbody></table></div><p class="note">' + (DIF.sort === 'rate' ? '太線の行までの配点の合計が' + goalId() + '点（目標）です。この行より上の小問を取れば、目標に届きます。' : '正答率は完全に正解した人の割合、得点率は部分点を含む平均の割合です。自分の解答を入れて比べるときは「解く順番と記録」のタブへ。') + '</p></section>';
-    /* 出典 */
-    h += '<section class="panel"><h2>データの出典</h2><ul class="bul">' + (C.rateSources || []).map(function (s) { return '<li>' + esc(s.name) + '<small>（' + esc(s.note) + '）</small></li>'; }).join('') + '<li>単元と A・B・C の分類、難易度の区切り（60%・40%）は、このアプリによるものです。2025年は新課程の第1〜5問のみを集計しています。</li></ul></section>';
     return h;
   }
   function itemsCSV() {
